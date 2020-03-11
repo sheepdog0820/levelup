@@ -1,0 +1,24 @@
+.said
+  .said__main
+    .said__main__stas
+      .said__main__stas__image
+        -# = image_tag current_user.image.url,size: "100x100"
+      .said__main__stas__name
+        -# = current_user.name
+        %p Lv:100
+    .said__main__tag
+      = image_tag "stas.png", size: "400x250"
+  .said__content
+    .said__content__mypage
+      = link_to edit_user_path(current_user) do
+        = icon('fas', 'home')
+      マイページ
+    .said__content__group
+      = icon('far', 'clipboard')
+      グループ
+    .said__content__tag
+      = icon('fas', 'tag')
+      タグ検索
+    .said__content__serach
+      = icon('fas', 'keyboard')
+      キーワード検索
