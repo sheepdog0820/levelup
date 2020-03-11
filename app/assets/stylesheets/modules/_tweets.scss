@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+.said{
+  width: 400px;
+  height: 100vh;
+  background-color: white;
+  float: left;
+  &__main{
+    height: 400px;
+    width: 100%;
+    &__stas{
+      display: flex;
+      height: 100px;
+      width: 100%;
+      padding-left: 50px;
+      &__image{
+        background-color: black;
+        height: 100px;
+        width: 100px;
+      }
+      &__name{
+        height: 100px;
+        width: calc(100% - 100px);
+        font-size: 20px;
+        line-height: 50px;
+        padding-left: 25px;
+      }
+    }
+    &__tag{
+      height: 300px;
+      width: 100%;
+    }
+  }
+  &__content{
+    width: 100%;
+    height: 200px;
+    padding-left: 100px;
+    &__mypage{
+      width: 100%;
+      height: 50px;
+      font-size: 20px;
+      line-height: 50px;
+    }
+    &__group{
+      width: 100%;
+      height: 50px;
+      font-size: 20px;
+      line-height: 50px;
+    }
+    &__tag{
+      width: 100%;
+      height: 50px;
+      font-size: 20px;
+      line-height: 50px;
+    }
+    &__serach{
+      width: 100%;
+      height: 50px;
+      font-size: 20px;
+      line-height: 50px;
+    }
+  }
+}
+
+.main{
+  width: calc(100vw - 400px);
+  height: 100vh;
+  background-color: cornflowerblue;
+  float: right;
+  &__form{
+    width: 100%;
+    height: 200px;
+    background-color: dimgray;
+    &__text{
+      background-color: blue;
+      width: 100%;
+      height: 100px;
+    }
+    &__bottom{
+      display: flex;
+      &__tag{
+        background-color: crimson;
+        width: calc(100% - 150px);
+        height: 100px;
+      }
+      &__image{
+        background-color: darkorange;
+        height: 50px;
+        width: 50px;
+      }
+      &__send{
+        background-color: darkturquoise;
+        height: 50px;
+        width: 50px;
+      }
+    }
+  }
+}
+
+.tweets{
+  background-color: aquamarine;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  &__user_image{
+    height: 100px;
+    width: 100px;
+  }
+  &__main{
+    background-color: chartreuse;
+    width: calc(100% - 100px);
+    height: 200px;
+    &__user-date{
+    height: 50px;
+    }
+    &__content{
+      height: 100px;
+    }
+    &__icon{
+      height: 50px;
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
