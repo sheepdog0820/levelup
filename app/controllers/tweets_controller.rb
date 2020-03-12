@@ -1,5 +1,10 @@
 class TweetsController < ApplicationController
   def index
+    if params[:tag]
+      @tweets = Tweet.tagged_with(params[:tag])
+    else
+      @tweets = Tweet.all
+    end
     @tweet = Tweet.new
     @tweets = Tweet.includes(:user).order("created_at DESC").page(params[:page]).per(5)
   end
@@ -20,7 +25,7 @@ class TweetsController < ApplicationController
 
   private
   def tweet_params
-    params.require(:tweet).permit(:image, :content).merge(user_id: current_user.id)
+    params.require(:tweet).permit(:image, :content, :tag_list).merge(user_id: current_user.id)
   end
 
   def set_tweet

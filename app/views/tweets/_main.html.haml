@@ -2,11 +2,12 @@
   .main__form
     = form_with(model: Tweet.create, class: "s") do |f|
       = f.text_field :content, class: '.main__form__text', placeholder: 'text'
+      = f.label :tag_list,placeholder: '興味・関心（カンマ区切り）' do
+        = f.text_field :tag_list
       = f.label :image, class: 'main-bar__message-form__form__image-box__label' do
         = icon('fas', 'image', class: 'main-bar__message-form__form__image-box__icon')
         = f.file_field :image, class: 'main-bar__message-form__form__image-box__input'
       = f.submit 'Send', class: 'main-bar__message-form__form__send'
-  .main-__tweets
+  .main__tweets
     = render "tweets"
     = render "tweets"
-  
