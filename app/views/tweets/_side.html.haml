@@ -14,7 +14,8 @@
         = icon('fas', 'home')
       マイページ
     .said__content__group
-      = icon('far', 'clipboard')
+      = link_to new_group_path do
+        = icon('far', 'clipboard')
       グループ
     .said__content__tag
       = icon('fas', 'tag')
