@@ -1,24 +1,14 @@
 class TweetsController < ApplicationController
+
   def index
-    if params[:tag]
-      @tweets = Tweet.tagged_with(params[:tag])
-    else
-      @tweets = Tweet.all
-    end
-    @tweet = Tweet.new
+    # if params[:tag]
+    #   @tweets = Tweet.tagged_with(params[:tag])
+    # else
+    #   @tweets = Tweet.all
+    # end
     @tweets = Tweet.includes(:user).order("created_at DESC").page(params[:page]).per(5)
   end
 
-  # def create
-  #   @message = @group.messages.new(message_params)
-  #   if @message.save
-  #     redirect_to group_messages_path(@group), notice: 'メッセージが送信されました'
-  #   else
-  #     @messages = @group.messages.includes(:user)
-  #     flash.now[:alert] = 'メッセージを入力してください。'
-  #     render :index
-  #   end
-  # end
   def create
     Tweet.create(tweet_params)
   end
@@ -26,10 +16,6 @@ class TweetsController < ApplicationController
   private
   def tweet_params
     params.require(:tweet).permit(:image, :content, :tag_list).merge(user_id: current_user.id)
-  end
-
-  def set_tweet
-    @tweet = Tweet.find(params[:id])
   end
 
   def move_to_index
