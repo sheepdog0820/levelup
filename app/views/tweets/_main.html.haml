@@ -2,8 +2,8 @@
   .main__form
     = form_with(model: Tweet.create, class: "s") do |f|
       = f.text_field :content, class: 'main__form__text', placeholder: 'text'
-      = f.label :tag_list, class: 'main__form__tag',placeholder: '興味・関心（カンマ区切り）' do
-        = f.text_field :tag_list, placeholder: 'tag'#, @tweet.tag_list.join(',')
+      = f.label :tag_list do
+        = f.select :tag_list, [ ["html","html"], ["css", "css"], ["ruby", "ruby" ] ,["rails", "rails"], ["javascript", "javascript"]], prompt: "タブを選択してください", class: 'main__form__tag'
       = f.label :image, class: 'main__form__label' do
         = icon('fas', 'image', class: 'main__form__icon')
         = f.file_field :image, class: 'main__form__input'
