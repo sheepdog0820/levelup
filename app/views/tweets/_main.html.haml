@@ -1,7 +1,7 @@
 .main
   .main__form
-    = form_with(model: Tweet.create, class: "s") do |f|
-      = f.text_field :content, class: 'main__form__text', placeholder: 'text'
+    = form_with(model: Tweet.create, class: "create-tweet") do |f|
+      = f.text_area :content, class: 'main__form__text', placeholder: 'text'
       = f.label :tag_list do
         = f.select :tag_list, [ ["html","html"], ["css", "css"], ["ruby", "ruby" ] ,["rails", "rails"], ["javascript", "javascript"]], prompt: "タブを選択してください", class: 'main__form__tag'
       = f.label :image, class: 'main__form__label' do
@@ -10,3 +10,4 @@
       = f.submit 'Send', class: 'main__form__send'
   .main__tweets
     = render @tweets
+  .result
