@@ -3,6 +3,7 @@ class TweetsController < ApplicationController
 
   def index
     @tweets = Tweet.includes(:user).order("created_at DESC").page(params[:page]).per(5)
+    @chart = {"国語" => 10, "算数" => 20, "理科" => 30, "社会" => 40}
   end
 
   def create
