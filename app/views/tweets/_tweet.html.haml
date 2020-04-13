@@ -1,0 +1,19 @@
+.tweet{data: {tweet: {id: tweet.id}}}
+  .tweet__user-image
+    = image_tag tweet.user.image.url,size: "100x100"    
+  .tweet__main
+    .tweets__main__user-date
+      = tweet.user.name
+      = tweet.created_at.strftime("%Y年%m月%d日 %H時%M分")
+    .tweet__main__content
+      = tweet.content
+    = image_tag tweet.image.url,size: "50x50",class: 'image' if tweet.image.present?
+    .tweet__main__icon
+      = icon('far','heart')
+      = icon('far','comment')
+      = tweet.tag_list
+  .tweet__sab
+    詳細
+    編集
+    = link_to tweet_path(tweet.id), method: :delete, class: "" do
+      %p 削除
