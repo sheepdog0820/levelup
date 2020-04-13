@@ -9,17 +9,18 @@
     .said__main__tag
       = image_tag "stas.png", size: "400x250"
   .said__content
-    .said__content__mypage
+    .said__content__box
       = link_to edit_user_path(current_user) do
         = icon('fas', 'home')
       マイページ
-    .said__content__group
+    
+    .said__content__box
       = link_to new_group_path do
         = icon('far', 'clipboard')
       グループ
-    .said__content__tag
+    .said__content__box
       = icon('fas', 'tag')
       タグ検索
-    .said__content__serach
+    .said__content__box
       = icon('fas', 'keyboard')
       キーワード検索
