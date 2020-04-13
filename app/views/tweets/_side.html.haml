@@ -13,7 +13,10 @@
       = link_to edit_user_path(current_user) do
         = icon('fas', 'home')
       マイページ
-    
+    .said__content__box
+      = link_to destroy_user_session_path(current_user), method: :delete, class: "" do
+        = icon('fas', 'door-open')
+      ログアウト
     .said__content__box
       = link_to new_group_path do
         = icon('far', 'clipboard')
