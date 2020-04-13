@@ -15,4 +15,5 @@
   .tweet__sab
     詳細
     編集
-    削除
+    = link_to tweet_path(tweet.id), method: :delete, class: "" do
+      %p 削除
