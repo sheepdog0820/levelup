@@ -7,7 +7,10 @@
         = current_user.name
         %p Lv:100
     .said__main__tag
+      -# @chart = {"国語" => 10, "算数" => 20, "理科" => 30, "社会" => 40}
+      -# [ ["html","html"], ["css", "css"], ["ruby", "ruby" ] ,["rails", "rails"], ["javascript", "javascript"]]
       = pie_chart @chart
+      -# = pie_chart {"html" => 10, "css" => 20, "ruby" => 30, "rails" => 30, "javascript" => 10}
   .said__content
     .said__content__box
       = link_to edit_user_path(current_user) do
