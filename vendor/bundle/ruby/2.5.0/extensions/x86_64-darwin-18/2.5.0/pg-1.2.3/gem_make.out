@@ -1,5 +1,5 @@
 current directory: /Users/kenta/projects/levelup/vendor/bundle/ruby/2.5.0/gems/pg-1.2.3/ext
-/Users/kenta/.rbenv/versions/2.5.1/bin/ruby -I /Users/kenta/.rbenv/versions/2.5.1/lib/ruby/site_ruby/2.5.0 -r ./siteconf20200508-63089-6qfm15.rb extconf.rb --with-pg-config\=/usr/local/Cellar/postgresql/12.2_1/bin/pg_cofig
+/Users/kenta/.rbenv/versions/2.5.1/bin/ruby -I /Users/kenta/.rbenv/versions/2.5.1/lib/ruby/site_ruby/2.5.0 -r ./siteconf20200509-71246-1o8i2xo.rb extconf.rb --with-pg-config\=/usr/local/Cellar/postgresql/12.2_1/bin/pg_cofig
 Using config values from /usr/local/Cellar/postgresql/12.2_1/bin/pg_cofig
 sh: /usr/local/Cellar/postgresql/12.2_1/bin/pg_cofig: No such file or directory
 sh: /usr/local/Cellar/postgresql/12.2_1/bin/pg_cofig: No such file or directory
